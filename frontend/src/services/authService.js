@@ -1,4 +1,5 @@
-import { data } from "react-router-dom";
+// frontend\src\services\authService.js
+
 import { api, requestConfig } from "../utils/config";
 
 // Register an user
@@ -13,6 +14,8 @@ const register = async (data) => {
     if (res) {
       localStorage.setItem("user", JSON.stringify(res));
     }
+
+    return res;
   } catch (error) {
     console.log(error);
   }
